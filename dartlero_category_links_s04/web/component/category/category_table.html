@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Categories</title>
     <link rel="components" href="category_add.html">
+    <link rel="components" href="category_edit.html">
   </head>
   <body>
     <element name="x-category-table" extends="span">
@@ -14,6 +15,12 @@
             categories="{{ categories }}">
           </x-category-add>
         </div>
+        <div template if="showCategoryEdit">
+          <x-category-edit
+            categories="{{ categories }}"
+            category="{{ category }}">
+          </x-category-edit>
+        </div>
         <table>
           <caption class="marker">
             Categories
@@ -22,11 +29,17 @@
           <tr>
             <th>Name</th>
             <th>Description</th>
+            <th>Edit</th>
+            <th>Remove</th>
           </tr>
           <tbody template iterate="category in categories.toList()">
             <tr>
               <td>{{ category.code }}</td>
               <td>{{ category.description }}</td>
+              <td><button id="editCategoryButton" on-click="edit(category)">
+                Edit</button>
+              </td>
+              <td><button on-click="delete(category)">Remove</button></td>
             </tr>
           </tbody>
         </table>
