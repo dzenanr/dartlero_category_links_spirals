@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Categories</title>
+    <link rel="components" href="category_add.html">
+    <link rel="components" href="category_edit.html">
+  </head>
+  <body>
+    <element name="x-category-table" extends="span">
+      <template>
+        <div template if="showCategoryAdd">
+          <x-category-add 
+            categories="{{ categories }}">
+          </x-category-add>
+        </div>
+        <div template if="showCategoryEdit">
+          <x-category-edit
+            categories="{{ categories }}"
+            category="{{ category }}">
+          </x-category-edit>
+        </div>
+        <table>
+          <caption class="marker">
+            Categories
+            <button id="addCategoryButton" on-click="add()">Show Add</button>
+          </caption>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Edit</th>
+          </tr>
+          <tbody template iterate="category in categories.toList()">
+            <tr>
+              <td>{{ category.code }}</td>
+              <td>{{ category.description }}</td>
+              <td><button id="editCategoryButton" on-click="edit(category)">
+                Edit</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </template>
+      <script type="application/dart" src="category_table.dart"></script>
+    </element>
+  </body>
+</html>
