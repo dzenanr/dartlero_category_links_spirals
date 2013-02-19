@@ -1,0 +1,11 @@
+name: dartlero_category_links
+version: 0.0.1
+author: Dzenan Ridjanovic <dzenanr@gmail.com>
+description: A model with 1 concept that uses dartlero.
+  A web application with 1 web component that displays categories from the model.
+homepage: http://ondart.me/
+dependencies:
+  dartlero:
+    git: git://github.com/dzenanr/dartlero.git
+  browser: any
+  web_ui: any
