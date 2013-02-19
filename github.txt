@@ -83,6 +83,7 @@ git commit -m 'short description'
 git status
 
 git rm file
+git rm -r folder
 
 git status
 
