@@ -1,0 +1,13 @@
+name: dartlero_category_links
+version: 0.0.6
+author: Dzenan Ridjanovic <dzenanr@gmail.com>
+description: "A model with 2 concepts that use dartlero. A web application with web\
+  \ components that display categories and their links from the model. \r\nA category\
+  \ may be added, edited, and removed. A link may be added, and edited. The model\
+  \ may be saved."
+homepage: http://ondart.me/
+dependencies:
+  browser: any
+  web_ui: any
+  dartlero:
+    git: git://github.com/dzenanr/dartlero.git
