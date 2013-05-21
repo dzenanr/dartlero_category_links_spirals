@@ -27,11 +27,11 @@ class LinkAdd extends WebComponent {
       var link = new Link();
       link.code = code.value;
       var linkString = webLink.value;
-      link.url = new Uri.fromString(linkString);
+      link.url = new Uri(linkString);
       link.description = description.value;
       if (links.add(link)) {
         message.text = 'added';
-        var linkTable = document.query('x-link-table').xtag;
+        var linkTable = query('#link-table').xtag;
         linkTable.links.order();
       } else {
         message.text = 'web link name already in use';

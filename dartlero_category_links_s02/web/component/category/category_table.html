@@ -4,15 +4,15 @@
   <head>
     <meta charset="utf-8">
     <title>Categories</title>
-    <link rel="components" href="category_add.html">
+    <link rel="import" href="category_add.html">
   </head>
   <body>
-    <element name="x-category-table" extends="span">
+    <element name="category-table" extends="span">
       <template>
         <div template if="showCategoryAdd">
-          <x-category-add 
+          <category-add
             categories="{{ categories }}">
-          </x-category-add>
+          </category-add>
         </div>
         <table>
           <caption class="marker">

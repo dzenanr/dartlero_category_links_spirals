@@ -20,7 +20,7 @@ testCategoryLinks() {
     test('Add Dart category link', () {
       var link = new Link();
       link.code = 'Dart Editor';
-      link.url = new Uri.fromString('http://www.dartlang.org/docs/editor/');
+      link.url = new Uri('http://www.dartlang.org/docs/editor/');
       category.links.add(link);
       category.links.display('Add Dart category link');
     });

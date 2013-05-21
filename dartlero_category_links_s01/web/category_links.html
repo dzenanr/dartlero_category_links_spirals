@@ -4,19 +4,17 @@
   <head>
     <meta charset="utf-8">
     <title>Category Links</title>
-    <link rel="components" href="component/category/category_table.html">
     <link rel="stylesheet" href="css/marker.css"/>
     <link rel="stylesheet" href="css/page.css"/>
     <link rel="stylesheet" href="css/table.css"/>
+    <link rel="import" href="component/category/category_table.html">
   </head>
   <body>
     <div class="page-title">
       dartlero
     </div>
 
-    <x-category-table
-      categories="{{ categories }}">
-    </x-category-table>
+    <category-table categories="{{ categories }}"> </category-table>
 
     <script type="application/dart" src="category_links.dart"></script>
     <script src="packages/browser/dart.js"></script>
