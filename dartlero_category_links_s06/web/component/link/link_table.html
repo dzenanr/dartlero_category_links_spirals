@@ -33,7 +33,7 @@
             <th>Description</th>
             <th>Edit</th>
           </tr>
-          <tbody template iterate="link in links.toList()">
+          <tbody template repeat="link in links.internalList">
             <tr>
               <td>
                 <a href="{{ link.url }}">

@@ -1,7 +1,6 @@
 part of dartlero_category_links;
 
 class CategoryLinksModel extends ConceptModel {
-
   static final String category = 'Category';
 
   Map<String, ConceptEntities> newEntries() {
@@ -76,5 +75,4 @@ class CategoryLinksModel extends ConceptModel {
       '============= ============= ============= '
     );
   }
-
 }

@@ -6,7 +6,7 @@ import 'package:web_ui/web_ui.dart';
 class LinkTable extends WebComponent {
   Category category;
   Links links;
-
+  @observable
   bool showLinkAdd = false;
 
   add() {

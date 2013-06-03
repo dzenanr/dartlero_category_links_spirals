@@ -16,7 +16,7 @@
             <th>Name</th>
             <th>Description</th>
           </tr>
-          <tbody template iterate="category in categories.toList()">
+          <tbody template repeat="category in categories.toList()">
             <tr>
               <td>{{ category.code }}</td>
               <td>{{ category.description }}</td>

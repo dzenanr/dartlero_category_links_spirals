@@ -6,9 +6,11 @@ import 'package:web_ui/web_ui.dart';
 class CategoryTable extends WebComponent {
   Categories categories;
   Category category;
-  
+  @observable
   bool showCategoryAdd = false;
+  @observable
   bool showCategoryEdit = false;
+  @observable
   bool showCategoryLinks = false;
 
   add() {
@@ -21,12 +23,12 @@ class CategoryTable extends WebComponent {
       addCategory.text = 'Show Add';
     }
   }
-  
+
   edit(category) {
     showCategoryEdit = true;
     this.category = category;
   }
-  
+
   delete(category) {
     categories.remove(category);
     showCategoryLinks = false;
@@ -35,7 +37,7 @@ class CategoryTable extends WebComponent {
   showLinks(category) {
     showCategoryLinks = true;
     this.category = category;
+    category.links.internalList = toObservable(category.links.internalList);
     category.links.order();
   }
-  
 }

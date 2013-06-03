@@ -34,7 +34,7 @@
             <th>Remove</th>
             <th>Show</th>
           </tr>
-          <tbody template iterate="category in categories.toList()">
+          <tbody template repeat="category in categories.internalList">
             <tr>
               <td>{{ category.code }}</td>
               <td>{{ category.description }}</td>
@@ -49,7 +49,7 @@
         <br/>
         <div template if="showCategoryLinks">
           <link-table
-            id ="link-table"
+            id="link-table"
             category="{{ category }}"
             links="{{ category.links }}">
           </link-table>

@@ -32,7 +32,7 @@
             <th>Edit</th>
             <th>Remove</th>
           </tr>
-          <tbody template iterate="category in categories.toList()">
+          <tbody template repeat="category in categories.internalList">
             <tr>
               <td>{{ category.code }}</td>
               <td>{{ category.description }}</td>

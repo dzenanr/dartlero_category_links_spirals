@@ -7,8 +7,9 @@ class LinkTable extends WebComponent {
   Category category;
   Links links;
   Link link;
-
+  @observable
   bool showLinkAdd = false;
+  @observable
   bool showLinkEdit = false;
 
   add() {
@@ -21,7 +22,7 @@ class LinkTable extends WebComponent {
       addLink.text = 'Show Add';
     }
   }
-  
+
   edit(link) {
     showLinkEdit = true;
     this.link = link;
